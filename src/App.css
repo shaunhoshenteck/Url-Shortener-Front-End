@@ -1,0 +1,43 @@
+.success {
+  background-color: rgb(139, 250, 106);
+  border: rgb(4, 68, 7) solid 2px;
+  border-radius: 5em;
+  padding: 2.5em;
+}
+
+.fail {
+  background-color: rgb(238, 177, 177);
+  border: rgb(199, 52, 52) solid 2px;
+  border-radius: 5em;
+  padding: 2.5em;
+}
+
+.editBlock {
+  text-align: center;
+}
+
+td {
+  overflow: scroll;
+  max-width: 30em;
+  word-wrap: break-word;
+}
+
+table {
+  width: 100%;
+}
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3em;
+  background-color: #2c292f;
+  position: fixed;
+  color: white;
+  text-align: center;
+  display: flex;
+}
+
+.copyright {
+  color: white;
+}
