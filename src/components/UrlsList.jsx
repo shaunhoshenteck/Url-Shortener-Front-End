@@ -22,15 +22,15 @@ const UrlsList = () => {
       });
   };
 
-  const handleEdit = (urlCode) => {
+  const clickEdit = (urlCode) => {
     setRedirect({ path: "/url/edit/" + urlCode });
   };
+
   useEffect(() => {
     getAll();
   }, []);
 
   if (loading) {
-    // return <LoadSpinner />;
   }
   if (redirect) {
     const { path, result } = redirect;
@@ -49,11 +49,12 @@ const UrlsList = () => {
                   className="table table-striped table-bordered"
                 >
                   <thead className="thead-light">
-                    <tr>
+                    <tr className="placeholder">
+                      <th>ID</th>
                       <th>Long URL</th>
                       <th>Short URL</th>
                       <th>Date</th>
-                      <th></th>
+                      <th>Edit</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -62,16 +63,18 @@ const UrlsList = () => {
                       const date = new Date(url.date);
                       return (
                         <tr key={url.shortCode}>
+                          <td>{url._id}</td>
                           <td>{url.longUrl}</td>
                           <td>
                             <a href={url.shortUrl}>{url.shortUrl}</a>
                           </td>
                           <td>{date.toUTCString()}</td>
-                          <td>
+                          <td className="editButtom">
                             <Row className="flex align-content-center ml-2 mr-2">
                               <Button
                                 size="sm"
-                                onClick={() => handleEdit(url.shortCode)}
+                                className="btn-dark"
+                                onClick={() => clickEdit(url.shortCode)}
                               >
                                 Edit
                               </Button>

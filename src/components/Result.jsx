@@ -10,11 +10,6 @@ const Result = () => {
   const { isSuccess, msg, data } = location.state || {};
   const { longUrl, shortUrl, shortCode, date } = data || {};
 
-  //   console.log("---------data---------");
-  //   console.log(longUrl);
-  //   console.log(shortUrl);
-  //   console.log(shortCode);
-  //   console.log(date);
   if (redirectEdit) {
     return <Redirect to={"/url/edit/" + shortCode} />;
   }
