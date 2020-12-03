@@ -9,7 +9,7 @@ const UrlsList = () => {
     const [redirect, setRedirect] = useState();
     const [loading, setLoading] = useState(true);
     const getAll = () => {
-        Axios.get('/api/url/all')
+        Axios.get('https://url-shortener-back-end.herokuapp.com/api/url/all')
             .then(response => {
                 setList(response.data);
             })

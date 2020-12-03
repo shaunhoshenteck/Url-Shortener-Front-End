@@ -26,10 +26,13 @@ const Create = () => {
     const createUrl = () => {
         let isSuccess, msg, data;
         console.log('creatingUrl');
-        Axios.post('/api/url/create', {
-            longUrl: url,
-            customString: customMode ? customInput : '',
-        })
+        Axios.post(
+            'https://url-shortener-back-end.herokuapp.com/api/url/create',
+            {
+                longUrl: url,
+                customString: customMode ? customInput : '',
+            }
+        )
             .then(response => {
                 switch (response.status) {
                     case 200:

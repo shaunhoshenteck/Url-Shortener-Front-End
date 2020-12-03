@@ -14,7 +14,9 @@ const Edit = () => {
     const [longUrl, setLongUrl] = useState();
     const [redirect, setRedirect] = useState();
     const getUrl = () => {
-        Axios.get(`/api/url/${urlCode}`)
+        Axios.get(
+            `https://url-shortener-back-end.herokuapp.com/api/url/${urlCode}`
+        )
             .then(response => {
                 if (response.data) {
                     console.log(response.data);
@@ -32,9 +34,12 @@ const Edit = () => {
 
     const updateUrl = () => {
         setLoading(true);
-        Axios.patch(`/api/url/edit/${urlCode}`, {
-            newLongUrl: longUrl,
-        })
+        Axios.patch(
+            `https://url-shortener-back-end.herokuapp.com/api/url/edit/${urlCode}`,
+            {
+                newLongUrl: longUrl,
+            }
+        )
             .then(response => {
                 const newUrlData = response.data;
                 setUrlData(newUrlData);
@@ -55,7 +60,9 @@ const Edit = () => {
     };
 
     const deleteUrl = () => {
-        Axios.delete(`/api/url/delete/${urlCode}`)
+        Axios.delete(
+            `https://url-shortener-back-end.herokuapp.com/api/url/delete/${urlCode}`
+        )
             .then(response => {
                 console.log(response.status);
                 if (response.status === 200) {
