@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Result from './Result';
 import Axios from 'axios';
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { Redirect, useParams } from 'react-router-dom';
+import { Form, FormControl, Button, ButtonGroup } from 'react-bootstrap';
 
 const Edit = () => {
     const { urlCode } = useParams();

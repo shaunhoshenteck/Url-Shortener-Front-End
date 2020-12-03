@@ -1,13 +1,13 @@
 .success {
   background-color: rgb(139, 250, 106);
-  border: rgb(4, 68, 7) solid 2px;
+  border: rgb(4, 68, 7) solid 3px;
   border-radius: 5em;
   padding: 2.5em;
 }
 
 .fail {
   background-color: rgb(238, 177, 177);
-  border: rgb(199, 52, 52) solid 2px;
+  border: rgb(199, 52, 52) solid 3px;
   border-radius: 5em;
   padding: 2.5em;
 }

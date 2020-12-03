@@ -62,12 +62,12 @@ const Create = () => {
                             isSuccess = false;
                             console.log('401!');
                             msg =
-                                "This website's URL is not valid! Please try again!";
+                                "This website's long URL is not valid! Please try again!";
                             break;
                         case 409:
                             isSuccess = false;
                             msg =
-                                'Sorry, this short URL address has been taken! Please try again!';
+                                'This short URL address has been taken! Please try again!';
                             break;
                         default:
                             isSuccess = false;
