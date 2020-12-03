@@ -1,13 +1,12 @@
-import React from "react";
-import { Jumbotron } from "react-bootstrap";
-import Create from "./Create";
+import React from 'react';
+import Create from './Create';
 // import "./Home.css";
 
 const Home = () => {
-  return (
-    <>
-      <Create />
-    </>
-  );
+    return (
+        <>
+            <Create />
+        </>
+    );
 };
 export default Home;
