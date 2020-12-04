@@ -120,7 +120,7 @@ const Edit = () => {
                             required
                         />
                     </Form.Group>
-                    <ButtonGroup>
+                    <ButtonGroup className="buttonGroup">
                         <Button variant="success" onClick={updateUrl}>
                             Update
                         </Button>
@@ -129,14 +129,10 @@ const Edit = () => {
                         </Button>
                     </ButtonGroup>
                 </Form>
-                <div className="mt-3">
+                <div className="mt-3 link">
                     <p>
                         <b>Short URL: </b>
                         <a href={urlData.shortUrl}>{urlData.shortUrl}</a>
-                    </p>
-                    <p>
-                        <b>Created at: </b>
-                        {urlData.date}
                     </p>
                 </div>
             </div>
