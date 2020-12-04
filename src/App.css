@@ -36,6 +36,7 @@ table {
 
 .buttonGroup {
   text-align: center;
+  justify-content: center;
 }
 
 .link {

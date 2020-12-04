@@ -120,14 +120,16 @@ const Edit = () => {
                             required
                         />
                     </Form.Group>
-                    <ButtonGroup className="buttonGroup">
-                        <Button variant="success" onClick={updateUrl}>
-                            Update
-                        </Button>
-                        <Button variant="danger" onClick={deleteUrl}>
-                            Delete
-                        </Button>
-                    </ButtonGroup>
+                    <div className="buttonGroup">
+                        <ButtonGroup>
+                            <Button variant="success" onClick={updateUrl}>
+                                Update
+                            </Button>
+                            <Button variant="danger" onClick={deleteUrl}>
+                                Delete
+                            </Button>
+                        </ButtonGroup>
+                    </div>
                 </Form>
                 <div className="mt-3 link">
                     <p>
